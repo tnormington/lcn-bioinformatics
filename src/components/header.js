@@ -1,34 +1,50 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Image from "./image"
+
+import logo from "../images/lcn-logo--on-dark.svg";
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+  <div className="bg-dark">
+    <div className="container">
+      <nav className="navbar navbar-expand-md navbar-dark bg-dark">
         <Link
+          className="navbar-brand"
           to="/"
           style={{
             color: `white`,
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          <img style={{ width: '40px' }} src={logo} />
         </Link>
-      </h1>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+          <span className="navbar-toggler-icon" />
+        </button>
+
+        <div className="collapse navbar-collapse" id="navbarContent">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a className="nav-link" href="#services">Services</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#how">How It Works</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#why">Why LCN?</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#contact">Contact</a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
     </div>
-  </header>
+    
+  </div>
+
 )
 
 Header.propTypes = {
