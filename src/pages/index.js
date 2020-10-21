@@ -9,19 +9,26 @@ import Callout from "../components/callout"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div className="container pt-5 pb-5">
-      <h1>LCN Bio Informatics</h1>
-      <p>A bioinformatics consulting company offering state of the art transcriptomics analyses,
-      bioinformatics support and educational materials for your lab or business.</p>
-      <p>
-      LCN Bioinformatics is dedicated to implementing the most innovative bioinformatic
-      approaches for your RNA-Seq analysis needs. I provide a range of academic and
-      corporate services to help accelerate the scientific discovery process for both model
-      and non-model systems. You will find my services useful and cost-effective whether you
-      require a great deal of help or just a little.
-      </p>
-      <a className="btn btn-primary" href="#contact">Contact Us</a>
+
+    <div className="hero">
+      <div className="container pt-5 pb-5">
+        <div className="shadow-lg rounded-lg bg-white p-5 mt-5 mb-5 mr-auto ml-auto" style={{ maxWidth: '650px'}}>
+          <h1>LCN Bio Informatics</h1>
+        <p>A bioinformatics consulting company offering state of the art transcriptomics analyses,
+        bioinformatics support and educational materials for your lab or business.</p>
+        <p>
+        LCN Bioinformatics is dedicated to implementing the most innovative bioinformatic
+        approaches for your RNA-Seq analysis needs. I provide a range of academic and
+        corporate services to help accelerate the scientific discovery process for both model
+        and non-model systems. You will find my services useful and cost-effective whether you
+        require a great deal of help or just a little.
+        </p>
+        <a className="btn btn-primary" href="#contact">Contact Us</a>
+        </div>
+        
+      </div>
     </div>
+    
 
     
 

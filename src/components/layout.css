@@ -24,3 +24,15 @@
 .text-lg {
   font-size: 1.3rem;
 }
+
+.hero {
+  background-image: url('../images/genetic-analysis1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+}
+
+.bg-dark {
+  background-color: #000732!important;
+}
