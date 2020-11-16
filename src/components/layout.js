@@ -30,9 +30,10 @@ const Layout = ({ children }) => {
       <Helmet>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossOrigin="anonymous" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;700&display=swap" rel="stylesheet" />
       </Helmet>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main className="mt-5" style={{ flex: '1 0 auto' }}>{children}</main>
+      <main className="" style={{ flex: '1 0 auto' }}>{children}</main>
       <footer style={{
         background: "#173160",
         padding: '1rem 0'

@@ -6,43 +6,44 @@ import Image from "./image"
 import logo from "../images/lcn-logo--on-dark.svg";
 import { $CombinedState } from "redux";
 
-import $ from 'jquery';
+
+import { handleAnchorLink } from '../utility'
 
 
-function handleAnchorLink(e) {
-  console.log(e)
-  e.preventDefault();
-  console.log(e.target.hash)
-  const { hash } = e.target;
-  const top = $(hash).offset().top - 100;
+// function handleAnchorLink(e) {
+//   console.log(e)
+//   e.preventDefault();
+//   console.log(e.target.hash)
+//   const { hash } = e.target;
+//   const top = $(hash).offset().top - 100;
 
-  window.scroll({
-    top: top,
-    left: 0,
-    behavior: 'smooth'
-  })
-  // $('html').animate({
-  //   scrollTop: ($(hash).offset().top - 100)
-  // }, 800, () => {
-  //   window.location.hash = hash;
-  // })
-}
+//   window.scroll({
+//     top: top,
+//     left: 0,
+//     behavior: 'smooth'
+//   })
+//   // $('html').animate({
+//   //   scrollTop: ($(hash).offset().top - 100)
+//   // }, 800, () => {
+//   //   window.location.hash = hash;
+//   // })
+// }
 
 const Header = ({ siteTitle }) => (
-  <div className="bg-dark">
+  <div className="navbar-wrapper">
     
-      <nav className="navbar fixed-top shadow-lg navbar-expand-md navbar-dark bg-dark">
+      <nav className="navbar fixed-top navbar-expand navbar-dark bg-transparent">
         <div className="container">
-          <Link
-          className="navbar-brand"
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+          <a
+            className="navbar-brand"
+            href="/"
+            onClick={handleAnchorLink}
+            style={{
+              color: `white`,
+              textDecoration: `none`,
+            }}>
           <img style={{ width: '40px' }} src={logo} />
-        </Link>
+        </a>
         <button 
           className="navbar-toggler" 
           type="button" 
@@ -55,7 +56,7 @@ const Header = ({ siteTitle }) => (
         </button>
 
         <div className="collapse navbar-collapse" id="navbarContent">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <a className="nav-link" href="#services" onClick={handleAnchorLink}>Services</a>
             </li>

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `LCN Bio Informatics`,
+    title: `LCN Bioinformatics`,
     description: `A bioinformatics consulting company offering state of the art transcriptomics analyses, bioinformatics support and educational materials for your lab or business.`,
     author: `@tnormington`,
   },

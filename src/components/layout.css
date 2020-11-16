@@ -17,6 +17,11 @@
 } */
 
 
+body {
+  font-family: 'Oxygen', sans-serif !important;
+}
+
+
 .text-center {
   text-align: center !important;
 }
@@ -25,14 +30,35 @@
   font-size: 1.3rem;
 }
 
-.hero {
+/* .hero {
   background-image: url('../images/genetic-analysis1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
   background-attachment: fixed;
+} */
+
+body .navbar-dark .navbar-nav .nav-link {
+  color: #fff;
 }
 
-.bg-dark {
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  body .navbar-dark .navbar-nav .nav-link {
+    font-size: 12px;
+    text-align: center;
+  }
+
+}
+
+body .bg-dark {
   background-color: #000732!important;
+}
+
+.navbar {
+  background-image: linear-gradient(to bottom, rgba(0,0,0, 1), rgba(0,0,0, 0))
 }

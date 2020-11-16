@@ -6,24 +6,38 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import Callout from "../components/callout"
 
+import video from '../video/video.mp4'
+
+import { handleAnchorLink } from '../utility'
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
 
-    <div className="hero">
+    <div className="hero position-relative">
+        <video style={{
+          position: 'absolute',
+          top: 0,
+          left: '50%',
+          transform: 'translateX(-50%)',
+          zIndex: -1,
+          objectFit: 'cover'
+        }} width="100%" height="100%" autoPlay loop>
+          <source src={video} type="video/mp4" />
+        </video>
       <div className="container pt-5 pb-5">
-        <div className="shadow-lg rounded-lg bg-white p-5 mt-5 mb-5 mr-auto ml-auto" style={{ maxWidth: '650px'}}>
-          <h1>LCN Bio Informatics</h1>
-        <p>A bioinformatics consulting company offering state of the art transcriptomics analyses,
-        bioinformatics support and educational materials for your lab or business.</p>
-        <p>
-        LCN Bioinformatics is dedicated to implementing the most innovative bioinformatic
-        approaches for your RNA-Seq analysis needs. I provide a range of academic and
-        corporate services to help accelerate the scientific discovery process for both model
-        and non-model systems. You will find my services useful and cost-effective whether you
-        require a great deal of help or just a little.
-        </p>
-        <a className="btn btn-primary" href="#contact">Contact Us</a>
+        <div className="rounded-lg bg-white p-5 mt-5 mb-5 mr-auto ml-auto" style={{ maxWidth: '700px', boxShadow: '6px 6px 0 #18ebe8'}}>
+          <h1>LCN Bioinformatics</h1>
+          <p>A bioinformatics consulting company offering state of the art transcriptomics analyses,
+          bioinformatics support and educational materials for your lab or business.</p>
+          <p className="mb-0">
+          LCN Bioinformatics is dedicated to implementing the most innovative bioinformatic
+          approaches for your RNA-Seq analysis needs. I provide a range of academic and
+          corporate services to help accelerate the scientific discovery process for both model
+          and non-model systems. You will find my services useful and cost-effective whether you
+          require a great deal of help or just a little.
+          </p>
+          {/* <a className="btn btn-primary" href="#contact" onClick={handleAnchorLink}>Contact Us</a> */}
         </div>
         
       </div>
@@ -35,7 +49,11 @@ const IndexPage = () => (
 
     <section style={{ background: '#dde8ff' }} className="pt-4 pb-4">
       <div className="container">
-        <h2 id="services" className="text-center mb-4 mt-3">Services</h2>
+        <h2 id="services" className="text-center mb-1 mt-3">Services</h2>
+        <div className="text-center mb-4">
+          <small><i>(These lists are not exhaustive & are solely examples)</i></small>
+        </div>
+        
         <div className="row">
           <Callout
             title="Transcriptomics"
@@ -96,7 +114,7 @@ const IndexPage = () => (
 
         <div className="row">
           <div className="col col-sm-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3">
-            <ul className="list-group text-lg">
+            <ul className="list-group text-lg shadow-lg">
             <li className="list-group-item">Specific to your research needs</li>
             <li className="list-group-item">High quality</li>
             <li className="list-group-item">Low cost</li>
@@ -116,7 +134,7 @@ const IndexPage = () => (
       <div className="container">
         <div className="row">
 
-          <div className="col col-12 col-md-6 text-center">
+          <div className="col col-12 col-md-6 text-center mb-3">
             <h2 className="mb-3" id="contact">Contact Us</h2>
             <p>
               Let’s get in touch! Please feel free to contact me if you have any inquiries or if you are interested in my consulting service.
@@ -124,30 +142,46 @@ const IndexPage = () => (
           </div>
 
           <div className="col col-12 col-md-6">
-            <div className="card shadow rounded-lg">
+            <div className="card shadow-lg rounded-lg">
               <div className="card-body">
-                <h6 className="card-title text-center">Louisa C. Normington
-                  <a className="btn btn-outline-primary p-1 mr-3 ml-3" href="facebook" title="LCN Facebook Profile">
-                    <i className="fa fa-fw fa-facebook" />
-                  </a>
-                  <a className="btn btn-outline-primary p-1" href="linkedin" title="LCN LinkedIn Profile">
-                    <i className="fa fa-fw fa-linkedin" />
-                  </a>
+                <h5 className="d-inline-block mr-2"><b>LCN Bioinformatics, LLC</b></h5>
+                
+                <h6 className="d-inline-block">Louisa C. Normington
                 </h6>
                 
-                
-                <a href="mailto:lcnbioinformatics@gmail.com">
-                  <i className="fa fa-fw fa-envelope-open mr-2" />lcnbioinformatics@gmail.com
+                <a href="mailto:lcnbioinformatics@gmail.com" className="d-flex align-items-start mb-2">
+                  <i className="fa fa-fw fa-envelope-open mr-2 mt-1 flex-shrink-0" />
+                  <span>
+                    lcnbioinformatics@gmail.com
+                  </span>
                 </a>
-                <br />
-                <a href="tel:780-995-1386">
-                  <i className="fa fa-fw fa-phone mr-2" />780-995-1386
+
+                <a href="tel:780-995-1386" className="d-flex align-items-start mb-2">
+                  <i className="fa fa-fw fa-phone mr-2 mt-1" />
+                  <span>
+                    780-995-1386
+                  </span>
                 </a>
-                <br />
-                <span>
-                  <i className="fa fa-fw fa-map-marker mr-2" />LCN Bioinformatics, LLC, 2 Greenwood Ave, PO Box 212, Prides Crossing, MA 01965
-                </span>
-                <br/>
+
+                <div className="d-flex align-items-start">
+                  <i className="fa fa-fw fa-map-marker mr-2 mt-1 flex-shrink-0" />
+                  <span className="flex-shrink-1">
+                    LCN Bioinformatics, LLC
+                    <br />
+                    2 Greenwood Ave, PO Box 212
+                    <br />
+                    Prides Crossing, MA 01965
+                  </span>
+                </div>
+
+                <div className="mt-2">
+                  <a className="btn btn-outline-primary p-1 mr-3" target="_blank" href="https://www.facebook.com/LCNBioinformatics/" title="LCN Facebook Profile">
+                    <i className="fa fa-fw fa-facebook" />
+                  </a>
+                  <a className="btn btn-outline-primary p-1" target="_blank" href="https://www.linkedin.com/company/lcn-bioinformatics-llc" title="LCN LinkedIn Profile">
+                    <i className="fa fa-fw fa-linkedin" />
+                  </a>
+                </div>
                 
               </div>
             
