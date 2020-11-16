@@ -8,6 +8,10 @@ import Callout from "../components/callout"
 
 import video from '../video/video.mp4'
 
+import avatarF from '../images/avatar-f.svg'
+
+import pipeline from '../images/pipeline-flat2.svg'
+
 import { handleAnchorLink } from '../utility'
 
 const IndexPage = () => (
@@ -51,7 +55,7 @@ const IndexPage = () => (
       <div className="container">
         <h2 id="services" className="text-center mb-1 mt-3">Services</h2>
         <div className="text-center mb-4">
-          <small><i>(These lists are not exhaustive & are solely examples)</i></small>
+          <small><i>(These are examples of what I can help you with. These lists are not exhaustive.)</i></small>
         </div>
         
         <div className="row">
@@ -104,6 +108,8 @@ const IndexPage = () => (
     <section className="pt-5 pb-5">
       <div className="container">
         <h2 id="how" className="text-center">How It Works</h2>
+
+        <img className="w-100" src={pipeline} />
       </div>
     </section>
 
@@ -114,16 +120,47 @@ const IndexPage = () => (
 
         <div className="row">
           <div className="col col-sm-12 col-md-8 col-lg-6 offset-md-2 offset-lg-3">
-            <ul className="list-group text-lg shadow-lg">
-            <li className="list-group-item">Specific to your research needs</li>
-            <li className="list-group-item">High quality</li>
-            <li className="list-group-item">Low cost</li>
-            <li className="list-group-item">Effective use of time</li>
-            <li className="list-group-item">Security and privacy</li>
-            <li className="list-group-item">Communication</li>
-          </ul>
+            <ul className="list-group shadow-lg">
+              <li className="list-group-item">Innovative analyses tailored to your research needs and goals</li>
+              <li className="list-group-item">High quality and cost-effective analyses guaranteed</li>
+              <li className="list-group-item">Effective use of time ensured by maintaining a small number of clients at any given time</li>
+              <li className="list-group-item">Security and privacy guaranteed to protect your data</li>
+              <li className="list-group-item">Communication is timely and delivered in plain English with descriptive figures to facilitate
+  understanding of services provided</li>
+            </ul>
           </div>
+
           
+        </div>
+
+        <div className="row mt-5 mb-5">
+          <div className="col col-sm-8 col-md-6 ml-auto mr-auto p-5 rounded rounded-lg shadow shadow-lg">
+            
+            <div className="text-lg">
+              “LCN Bioinformatics provided comprehensive and flexible transcriptomics analyses tailored to
+  our evolving research goals. Louisa’s reports were professionally delivered and representative
+  of her knowledge of the state-of-the-art technologies available today. She was able to explain
+  her findings in a clear and concise manner for non-bioinformaticians, like myself, to interpret.
+  Additionally, she provided scripts as part of her service with excellent notation. I was very
+  pleased with the quality of our interactions and would use her services again in the future.”
+            </div>
+
+            <div className="d-flex align-items-center justify-content-center mt-3">
+              <img style={{
+                width: '70px'
+              }} src={avatarF} />
+
+              <div>
+                <div className="text-lg">Jillian Prendergast</div>
+                <div className="text-primary"><i>Principal Scientist for Palleon Pharmaceuticals</i></div>
+              </div>
+
+            </div>
+
+            
+
+            
+          </div>
         </div>
         
       </div>
@@ -145,7 +182,7 @@ const IndexPage = () => (
             <div className="card shadow-lg rounded-lg">
               <div className="card-body">
                 <h5 className="d-inline-block mr-2"><b>LCN Bioinformatics, LLC</b></h5>
-                
+                <span className="text-primary text-lg mr-2">//</span>
                 <h6 className="d-inline-block">Louisa C. Normington
                 </h6>
                 
@@ -156,10 +193,10 @@ const IndexPage = () => (
                   </span>
                 </a>
 
-                <a href="tel:780-995-1386" className="d-flex align-items-start mb-2">
+                <a href="tel:978-818-9741" className="d-flex align-items-start mb-2">
                   <i className="fa fa-fw fa-phone mr-2 mt-1" />
                   <span>
-                    780-995-1386
+                    978-818-9741
                   </span>
                 </a>
 
@@ -168,9 +205,9 @@ const IndexPage = () => (
                   <span className="flex-shrink-1">
                     LCN Bioinformatics, LLC
                     <br />
-                    2 Greenwood Ave, PO Box 212
+                    670 N. Commercial St, Unit 32
                     <br />
-                    Prides Crossing, MA 01965
+                    Manchester, NH, 03101
                   </span>
                 </div>
 
